@@ -1,0 +1,43 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+        x:Class="CustomizationAndSerialization.MainWindow"
+        Title="MainWindow" Height="350" Width="525" dx:ThemeManager.ThemeName="Office2013LightGray">
+    <Grid>
+
+        <DockPanel>
+            <dxb:BarManager Name="barManager">
+                <dxb:BarManager.Categories>
+                    <dxb:BarManagerCategory Caption="MainMenuItems" Name="mainCategory"/>
+                    <dxb:BarManagerCategory Caption="Serialization" Name="serializationCategory"/>
+                </dxb:BarManager.Categories>
+                <dxb:BarManager.Bars>
+                    <dxb:Bar IsMainMenu="True" Caption="MainBar">
+                        <dxb:Bar.Items>
+                            <dxb:BarSubItem Content="Menu"> 
+                                <dxb:BarSubItem.Items>
+                                    <dxb:BarButtonItem Content="File" Name="fileItem" CategoryName="mainCategory"/>
+                                    <dxb:BarButtonItem Content="Exit" Name="exitItem" CategoryName="mainCategory"/>
+                                </dxb:BarSubItem.Items>   
+                            </dxb:BarSubItem>
+                        </dxb:Bar.Items>
+                    </dxb:Bar>
+                    <dxb:Bar Caption="Toolbar">
+                        <dxb:Bar.Items>
+                            <dxb:BarButtonItem Content="Save" ItemClick="OnSaveBarManagerLayout" CategoryName="serializationCategory" Description="Saves layout of bars"/>
+                            <dxb:BarButtonItem Content="Load" ItemClick="OnLoadBarManagerLayout" CategoryName="serializationCategory" Description="Restores layout of bars"/>
+                        </dxb:Bar.Items>   
+                    </dxb:Bar>
+                    <dxb:Bar Caption="Status Bar" IsStatusBar="True" ShowDragWidget="False" ShowSizeGrip="True">
+                        <dxb:Bar.DockInfo>
+                            <dxb:BarDockInfo ContainerType="Bottom"/>
+                        </dxb:Bar.DockInfo>
+                    </dxb:Bar>
+                </dxb:BarManager.Bars>
+            </dxb:BarManager>
+        </DockPanel>
+
+    </Grid>
+</Window>
