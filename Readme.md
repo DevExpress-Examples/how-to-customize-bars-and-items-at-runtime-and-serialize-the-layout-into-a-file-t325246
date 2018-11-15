@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/CustomizationAndSerialization/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/CustomizationAndSerialization/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/CustomizationAndSerialization/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/CustomizationAndSerialization/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to: Customize Bars and Items at Runtime and Serialize the Layout into a File
 
 
